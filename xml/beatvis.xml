@@ -1,0 +1,294 @@
+<groupdef id="player.normal.display.beatvisualization" name="BeatVisualization">
+  <AnimatedLayer
+    x="5" y="0"
+    w="76" h="50"
+    id="beatleft"
+    image="player.display.beat.left"
+    move="0"
+    autoplay="0"
+    autoreplay="0"
+    ghost="1"
+  />
+  <AnimatedLayer
+    x="86" y="0"
+    w="76" h="50"
+    id="beatright"
+    image="player.display.beat.right"
+    move="0"
+    autoplay="0"
+    autoreplay="0"
+    ghost="1"
+  />
+  <layer
+    x="0" y="0"
+    image="player.display.beat.textoverlay"
+  />
+  <layer
+    id="beatdisplayoverlay"
+    x="0" y="0"
+    image="player.display.beat.displayoverlay"
+  />
+  <button
+    id="beatvisualization"
+    x="0" y="0"
+    w="153" h="31"
+    tooltip="Toggle Beat Visualization"
+    rectrgn="1"
+    ghost="0"
+  />
+  <togglebutton
+    id="beatvisualization2"
+    x="82" y="12"
+    w="2" h="2"
+    tooltip="Toggle Beat Visualization"
+    rectrgn="1"
+    ghost="0"
+  />
+
+</groupdef>
+
+
+<!-- DISPLAY -->
+<groupdef id="player.normal.display" name="Display" relatw="1" w="-49">
+
+  <layer
+    id="display.background.left"
+    x="0" y="0"
+    ghost="1"
+    image="player.display.bg.left"
+  />
+  <layer
+    id="display.background.center"
+    x="60" y="0"
+    ghost="1"
+    relatw="1"
+    w="-120"
+    image="player.display.bg.center"
+  />
+  <layer
+    id="display.background.right"
+    x="-60" y="0"
+    ghost="1"
+    relatx="1"
+    image="player.display.bg.right"
+  />
+  <layer
+    id="display.left"
+    x="0" y="0"
+    ghost="1"
+    image="player.display.left"
+  />
+  <layer
+    id="display.center"
+    x="60" y="0"
+    ghost="1"
+    relatw="1"
+    w="-120"
+    tile="1"
+    image="player.display.center"
+  />
+  <layer
+    id="display.right"
+    x="-60" y="0"
+    ghost="1"
+    relatx="1"
+    image="player.display.right"
+  />
+  <layer
+    id="display.st.left"
+    x="0" y="44"
+    ghost="1"
+    image="player.display.songticker.bg.left"
+  />
+  <layer
+    id="display.st.center"
+    x="60" y="44"
+    ghost="1"
+    relatw="1"
+    w="-120"
+    tile="1"
+    image="player.display.songticker.bg.center"
+  />
+  <layer
+    id="display.st.right"
+    x="-60" y="44"
+    ghost="1"
+    relatx="1"
+    image="player.display.songticker.bg.right"
+  />
+
+  <!-- Timer -->
+  <text
+    id="timer"
+    display="time"
+    x="28" y="16"
+    w="70" h="20"
+    font="player.BIGNUM"
+    align="left"
+    timecolonwidth="5"
+    timeroffstyle="1"
+    fontsize="24"
+    color="font.display"
+  />
+
+
+  <!-- Playback Status -->
+  <status
+    id="status"
+    x="19" y="15"
+    w="10" h="23"
+    stopBitmap="player.status.stop"
+    playBitmap="player.status.play"
+    pauseBitmap="player.status.pause"
+  />
+
+
+
+  <!-- Visualization -->
+  <layer
+    id="visualization.background"
+    x="-99" y="12"
+    relatx="1"
+    image="player.visualization.background"
+  />
+
+  <vis
+    id="visual"
+    x="-93" y="13" w="72" h="25"
+    relatx="1"
+    gammagroup="DisplayVis"
+    ColorBand1="255,255,255"
+    ColorBand2="255,255,255"
+    ColorBand3="255,255,255"
+    ColorBand4="255,255,255"
+    ColorBand5="255,255,255"
+    ColorBand6="255,255,255"
+    ColorBand7="255,255,255"
+    ColorBand8="255,255,255"
+    ColorBand9="255,255,255"
+    ColorBand10="255,255,255"
+    ColorBand11="255,255,255"
+    ColorBand12="255,255,255"
+    ColorBand13="255,255,255"
+    ColorBand14="255,255,255"
+    ColorBand15="255,255,255"
+    ColorBand16="255,255,255"
+
+    colorbandpeak="255,255,255"
+    colorosc1="255,255,255"
+    colorosc2="255,255,255"
+    colorosc3="255,255,255"
+    colorosc4="255,255,255"
+    colorosc5="255,255,255"
+  />
+
+  <layer id="main.vis.trigger" x="-93" y="13" w="72" h="25" relatx="1" rectrgn="1"/>
+
+  <script file="scripts/visualizer.maki" />
+
+
+  <layer
+    id="visualization.overlay"
+    x="-99" y="12"
+    relatx="1"
+    image="player.visualization.overlay"
+    ghost="1"
+  />
+
+  <!-- Songticker -->
+  <Songticker
+    id="Songticker" showlen="1"
+    x="8" y="43"
+    relatw="1"
+    w="-16" h="23"
+    leftpadding="5"
+    rightpadding="-5"
+    font="player.songticker.font"
+    align="center"
+    valign="top"
+    rightclickaction="trackmenu"
+    dblclickaction="trackinfo"
+    fontsize="18"
+    color="font.display.songticker"
+    altfont="Arial"
+   />
+  
+  <Text
+    id="Infoticker"
+    x="8" y="43"
+    relatw="1"
+    w="-16" h="23"
+    leftpadding="5"
+    rightpadding="-5"
+    font="player.songticker.font"
+    align="center"
+    valign="top"
+    fontsize="18"
+    color="font.display.songticker"
+    altfont="Arial"
+	visible="0"
+   />
+
+  <!-- Songticker overlay -->
+  <layer
+    id="display.left.overlay"
+    x="0" y="0"
+    ghost="1"
+    image="player.display.left.overlay"
+  />
+  <layer
+    id="display.right.overlay"
+    x="-21" y="0"
+    ghost="1"
+    relatx="1"
+    image="player.display.right.overlay"
+  />
+
+  <!-- the songinfo -->
+  <group id="player.normal.songinfo" x="96" y="17" />
+
+  <group id="player.normal.display.beatvisualization" x="200" y="11" visible="0"/>
+
+  <layer
+    id="display.left"
+    x="0" y="0"
+    ghost="1"
+    image="player.display.left"
+    alpha="13"
+  />
+
+  <layer
+    id="display.center"
+    x="60" y="0"
+    ghost="1"
+    relatw="1"
+    w="-120"
+    tile="1"
+    image="player.display.center"
+    alpha="13"
+  />
+
+  <layer
+    id="display.right.overlay2"
+    x="-60" y="0"
+    ghost="1"
+    relatx="1"
+    image="player.display.right"
+    alpha="13"
+  />
+
+  <script id="beatvisualization.script" file="scripts/beatvisualization.maki" />
+
+</groupdef>
+
+
+<container id="beatvis" name="Beat Visualizer" default_visible="0">
+
+
+<layout id="normal" minimum_w="388" minimum_h="349" h="349" w="988" maximum_w="988" maximum_h="349">
+	<Wasabi:Standardframe:NoStatus x="0" y="0" w="988" h="349" content="player.normal.display" />
+	<sendparams target="wasabi.frame.layout.base.bg" alpha="0"/>
+  <!--sendparams target="titlebar.title.bg.group" w="170"/-->
+</layout>
+
+</container>

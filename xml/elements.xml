@@ -24,7 +24,15 @@
   <truetypefont id="titlebar" file="fonts\tahomabdXP.ttf" allowmapping="1"/>
   <truetypefont id="DOS" file="fonts\VGA.ttf" allowmapping="1"/>
 
-	
+	<!-- beatvis -->
+
+  <bitmap id="player.display.beat.left" file="player/beat_left.png" gammagroup="DisplayBeatVis"/>
+  <bitmap id="player.display.beat.right" file="player/beat_right.png" gammagroup="DisplayBeatVis"/>
+  <bitmap id="player.display.beat.left2" file="player/beat_l2.png" gammagroup="DisplayBeatVis"/>
+  <bitmap id="player.display.beat.right2" file="player/beat_r2.png" gammagroup="DisplayBeatVis"/>
+  <bitmap id="player.display.beat.textoverlay" file="player/beat_textoverlay.png" gammagroup="DisplayBeatVis"/>
+  <bitmap id="player.display.beat.displayoverlay" file="player/beat_displayoverlay.png" gammagroup="Display"/>
+
 	<!-- player-normal -->
 
   <bitmap id="links.normal" file="images/window/windows-background-main.png" x="323" y="365" w="15" h="30" gammagroup="titlebarstripes"/>
